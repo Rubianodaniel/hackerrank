@@ -3,13 +3,23 @@ import numpy as np
 def hourglassSum(arr):
 
     #sacar los relojes de arena
-    for i in range(len(arr[0])):
+    list_muestra = []
+    for i in range(len(arr)):
         for j in range(len(arr[i])):
-            if i <=2:
-                a=(arr[i][j:j+3])
-                print(a)
-                print("="*100)
-            
+            ## fila superior
+            muestra = arr[i:(i+3),j:(j+3)]
+            if muestra.shape == (3,3):
+                list_muestra.append(muestra)
+
+
+    for element in list_muestra:
+        # e = element
+        # e[1][0]= 0
+        # e[1][-1] = 0
+        
+        print (element)
+        print ("="*64)
+                
         
             
            
